@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio - Aber Abdelatif</title>
+  <link rel="stylesheet" href="css/provial.css">
+</head>
+<body>
+  <button class="menu-toggle">&#9776;</button>
+
+  
+  <nav>
+    <ul class="nav-list">
+      <li><a href="provail.html">Welcome</a></li>
+      <li><a href="page2.html">About Me</a></li>
+      <li><a href="page3.html">Skills</a></li>
+      <li><a href="page4.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="contact" class="page">
+    <h1>Contact Me</h1>
+    <p>If you have any questions, feel free to reach out through the following contact details.</p>
+    
+    <div class="container">
+     
+        <div class="type">
+          <h3>telphone 
+          </h3>
+          <h4>0556744147</h4>
+          <img src="image/tlphone.png" alt="">
+        </div>
+        <div class="type">
+          <address>bouira</address>
+          <img src="image/addres.png" alt="">
+        </div>
+        <div class="type">
+          <h3>
+            gmail
+          </h3>
+          <h4>aberabdellatif@gmail.com</h4>
+          <img src="image/gmail.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector("nav");
+
+      menuToggle.addEventListener("click", function () {
+        nav.classList.toggle("active");
+      });
+
+      
+      document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');  
+          if (document.querySelector(targetId)) {
+            document.querySelector(targetId).scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>

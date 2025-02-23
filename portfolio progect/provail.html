@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio - Aber Abdelatif</title>
+  <link rel="stylesheet" href="css/provial.css">
+</head>
+<body>
+
+  
+  <button class="menu-toggle">&#9776;</button>
+
+  
+  <nav>
+    <ul class="nav-list">
+      <li><a href="provail.html">Welcome</a></li>
+      <li><a href="page2.html">About Me</a></li>
+      <li><a href="page3.html">Skills</a></li>
+      <li><a href="page4.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- صفحة الترحيب -->
+  <section id="welcome" class="page">
+    <div class="container">
+      <h1>Welcome to My Portfolio</h1>
+      <p>I'm thrilled to have you here. Explore to know more about my work and skills!</p>
+
+      <h3>
+        I'AM ABER Abdelatif and this is my Portfolio 
+      </h3>
+      
+      <div class="image-container">
+        <img src="image/photo_2024-11-14_16-46-14.jpg" alt="Welcome Image" class="section-image">
+      </div>
+      <h2>while(1){<br>
+      print("I'am the best ");<br>
+      }</h2>
+    </div>
+  </section>
+
+  
+  
+  
+  
+  <script>
+    
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector("nav");
+
+      menuToggle.addEventListener("click", function () {
+        nav.classList.toggle("active");
+      });
+
+      
+      document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');  
+          if (document.querySelector(targetId)) {
+            document.querySelector(targetId).scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

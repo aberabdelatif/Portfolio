@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Aber Abdelatif</title>
+    <link rel="stylesheet" href="css/provial.css">
+</head>
+<body>
+
+    <button class="menu-toggle">&#9776;</button>
+
+   
+    <nav>
+      <ul class="nav-list">
+        <li><a href="provail.html">Welcome</a></li>
+        <li><a href="page2.html">About Me</a></li>
+        <li><a href="page3.html">Skills</a></li>
+        <li><a href="page4.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="page" id="about">
+        <div class="about-container">
+            <h2>About Me</h2>
+            <div class="profile-photo">
+                <img src="image/bessnes.png" alt="Aber Abdelatif">
+            </div>
+            <p>
+                Hello! My name is <strong>Aber Abdelatif</strong>. I am a passionate computer science student with a strong interest in cybersecurity and software development. I always strive to improve my skills and work on innovative projects.
+            </p>
+            <p>
+                My goal is to pursue a Master's degree at Oxford University and contribute to the world of technology by building secure and efficient applications.
+            </p>
+        </div>
+        
+<div class="diploma-section">
+    <h3>My Diplomas & Certifications</h3>
+    <ul class="diploma-list">
+        <li>License in Computer Science - University of Bouira</li>
+        <li>Online Diploma - Python Development</li>
+        <li>Cybersecurity Fundamentals Certification</li>
+        <li>Advanced Web Development Certificate</li>
+    </ul>
+</div>
+
+    </main>
+    <script>
+   
+        document.addEventListener("DOMContentLoaded", function () {
+          const menuToggle = document.querySelector(".menu-toggle");
+          const nav = document.querySelector("nav");
+    
+          menuToggle.addEventListener("click", function () {
+            nav.classList.toggle("active");
+          });
+    
+          
+          document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
+              const targetId = this.getAttribute('href');  
+              if (document.querySelector(targetId)) {
+                document.querySelector(targetId).scrollIntoView({
+                  behavior: 'smooth'
+                });
+              }
+            });
+          });
+        });
+      </script>
+</body>
+</html>
